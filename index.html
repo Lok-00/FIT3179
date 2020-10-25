@@ -9,7 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
   
   <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="styles.css" media="all">
+  <link rel="stylesheet" type="text/css" href="style.css" media="all">
   
 </head>
 <body>
@@ -24,15 +24,15 @@
 
 <script type="text/javascript">
   
-  var vis1 = "js/choropleth_map.vg.json";
+  var vis1 = "hmwk9.json";
   
   vegaEmbed('#choropleth_map', vis1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  var vis2 = "js/scatter_plot_interactive.vg.json";
+  var vis2 = "hmwk10.json";
   
-  vegaEmbed('#scatter_plot', vis2).then(function(result) {
+  vegaEmbed('#bubble_plot', vis2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
