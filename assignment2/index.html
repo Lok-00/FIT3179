@@ -1,39 +1,144 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Multiple Visualisations | Assignment2</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
   <!-- Import vega-embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-  
-  <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="style.css" media="all">
-  
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- custom style -->
+  <style>
+    *{
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+    h1{
+      font-weight: 900;
+      text-align: center;
+    }
+     body{
+       background-color: lightgray;
+     }
+     .page{
+       width: 850px;    
+       background-color: white;   
+       margin: auto;
+       padding: 50px;
+       padding-top: 35px;
+    }
+    .vis-container{
+      width: 100%;
+    }
+    .description h2, h1{
+      margin-top:0px;
+    }
+    .description-right {
+      padding-left: 20px;
+    }
+    .description-left{
+      padding-right: 20px;
+    }
+    .pure-g{
+      margin-bottom: 25px;
+    }
+    .small-font{
+        font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Assignment 2</h1>
+ <div class="page">
 
-<h2>This is my first visualisation</h2>
-<div id="choropleth_map"></div>
+   <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1>FIT3179 Assignment 2 - (30707536)</h1>
+      </div>
+    </div>
+  <!-- end pure grid group -->
 
-<h2>This is my second visualisation</h2>
-<div id="scatter_plot"></div>
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+          <div class="description description-left">
+            <h2>The Choropleth Map</h2>
+            <p>Choropleth map can show quantitative data perfectly, the greater luminance the value, the darker the colour. My choropleth map describes the total death cases of COVID-19 in year 2020 and the range of death cases is 10 to 10000, the greater the count of death cases, the darker the colour on the map.</p>
+          </div>
+        </div>
+        <div class="pure-u-2-3">
+          <div id="vis1" class="vis-container"></div>
+        </div>
+    </div>
+    <!-- end pure grid group -->
 
-<script type="text/javascript">
-  var vis1 = "hmwk9.json";
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+          <div id="vis2"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+            <h2>The Heatmap</h2>
+            <p>The heatmap shows the COVID-19 death rate based on different categories of ages. Different categories of ages have different probability to get infection and death rates. However, due to the evolutionary of COVID-19 virus, the bin which has darkest colour in the visualisation has the highest death rate within every categories of ages.</p>
+          </div>
+        </div>
+      
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>This is the third section</h2>
+          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+        </div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="vis4"  class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="vis3"  class="vis-container"></div>
+      </div>
+    
+    </div>
+    <!-- end pure grid group -->
   
-  vegaEmbed('#choropleth_map', vis1).then(function(result) {
+    <div class="pure-g">
+      <div class="pure-u-1-1 small-font">
+        <p>This visualisation is created by <a href="https://github.com/KadekSatriadi" target="_blank">Kadek Satriadi</a>. The datasource is <a href="#"" target="_blank">some data repository online</href>.</p>
+      </div>
+    </div>
+  
+
+  </div> <!-- end page -->
+   
+<script type="text/javascript">
+  var specVis1 = "assignment2/Total deaths of Countries(map).vl.json";
+  var specVis2= "assignment2/Covid death rates and median age.vl.json";
+
+  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  var vis2 = "hmwk10.json";
-  
-  vegaEmbed('#scatter_plot', vis2).then(function(result) {
+   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis3', specVis1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis4', specVis2, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
-
 </body>
 </html>
