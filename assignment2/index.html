@@ -77,12 +77,14 @@
           <div class="description description-left">
             <h2>The Choropleth Map</h2>
             <p1>Choropleth map can show quantitative data perfectly, the greater luminance the value, the darker the colour. My choropleth map describes the total death cases of COVID-19 in year 2020 and the range of death cases is 10 to 10000, the greater the count of death cases, the darker the colour on the map.</p1>
+            <p></p>
           </div>
         </div>
         <div class="pure-u-1">
           <div id="vis1" class="vis-container"></div>
         </div>
     </div>
+    <p></p>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
@@ -98,6 +100,7 @@
         </div>
       
     </div>
+    <p></p>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
@@ -112,6 +115,7 @@
         <div id="vis3"  class="vis-container"></div>
       </div>
     </div>
+    <p></p>
     <!-- end pure grid group -->
     
   
@@ -127,7 +131,7 @@
 <script type="text/javascript">
   var specVis1 = "Choroplethmap.vl.json";
   var specVis2 = "MedianAgeHeatMap.vl.json";
-  var specVis3 = "TotalTestScatterPlot.vl.json";
+  var specVis3 = "GdpInteractiveMultiView.vl.json";
 
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
