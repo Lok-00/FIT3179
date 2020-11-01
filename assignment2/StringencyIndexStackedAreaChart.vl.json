@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "stringency index of continent",
+  "background": "seashell",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Lok-00/FIT3179/main/owid-covid-data%20(1).csv"
+  },
+  "width": 300,
+  "height": 200,
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "field": "date",
+      "timeUnit": "monthdate",
+      "title": "Date",
+      "axis": {"format": "%b"}
+    },
+    "y": {
+      "aggregate": "count",
+      "field": "stringency_index",
+      "axis": null,
+      "stack": "normalize"
+    },
+    "color": {"field": "continent", "scale": {"scheme": "category20b"}}
+  },
+  "config": {}
+}
