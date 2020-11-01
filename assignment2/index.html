@@ -133,6 +133,22 @@
     <p></p>
     <!-- end pure grid group -->
     
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div class="description description-left">
+            <h2>The Interactive Multi-View Displays</h2>
+            <p1>GDP per capacita, the gross domestic product per capita, is a measure of a country's economic output that accounts for its number of people. It divides the country's gross domestic product by its total population. The visualisation shows the GDP per capacita over total deaths from January to July. The higher the GDP per capacita, the lower the death rate. Besides, the lower the GDP per capacita, the higher the death rate.</p1>
+            <p></p>
+          </div>
+        </div>
+        <div class="pure-u-1">
+          <div id="vis5" class="vis-container"></div>
+        </div>
+    </div>
+    <p></p>
+    <!-- end pure grid group -->
+    
   
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
@@ -148,6 +164,7 @@
   var specVis2 = "MedianAgeHeatMap.vl.json";
   var specVis3 = "DailyNewDeathHeatMap.vl.json";
   var specVis4 = "TotalTestScatterPlot.vl.json";
+  var specVis5 = "GdpInteractiveMultiView.vl.json";
 
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -164,6 +181,11 @@
   vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+  
+  vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
 </script>
 </body>
 </html>
