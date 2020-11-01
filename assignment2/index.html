@@ -98,22 +98,37 @@
             <p>The heatmap shows the COVID-19 death rate based on different categories of ages. Different categories of ages have different probability to get infection and death rates. However, due to the evolutionary of COVID-19 virus, the bin which has darkest colour in the visualisation has the highest death rate within every categories of ages.</p>
           </div>
         </div>
-      
+    </div>
+    <p></p>
+    <!-- end pure grid group -->
+    
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>The Heatmap II</h2>
+          <p>It clearly shows the daily new death of COVID-19 from January to July 2020. Obviously, the COVID-19 cases is become more and more serious especially from end of March. We can see the trend of virus spread along time and this is putting us in danger if we still don't take it serious.</p>
+        </div>
+      </div>
+      <div class="pure-u-2-3">
+        <div id="vis3"  class="vis-container"></div>
+      </div>
     </div>
     <p></p>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
+    	<div class="pure-u-2-3">
+        	<div id="vis4"  class="vis-container"></div>
+      	</div>
       <div class="pure-u-1-3">
         <div class="description description-left">
           <h2>The Scatter Plot</h2>
           <p>It shows the total COVID-19 tests in continents over total cases. The main purpose of this visualisation is to show that not everyone is tested on COVID-19 because the total cases confirmed is always higher than the amount of test. People who carry COVID-19 virus may be no effection to himself but he spreads the virus unintentionally daily.</p>
         </div>
       </div>
-      <div class="pure-u-2-3">
-        <div id="vis3"  class="vis-container"></div>
-      </div>
+      
     </div>
     <p></p>
     <!-- end pure grid group -->
@@ -131,7 +146,8 @@
 <script type="text/javascript">
   var specVis1 = "Choroplethmap.vl.json";
   var specVis2 = "MedianAgeHeatMap.vl.json";
-  var specVis3 = "GdpInteractiveMultiView.vl.json";
+  var specVis3 = "DailyNewDeathHeatMap.vl.json";
+  var specVis4 = "GdpInteractiveMultiView.vl.json";
 
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -145,7 +161,7 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  vegaEmbed('#vis4', specVis2, {"actions": false}).then(function(result) {
+  vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
