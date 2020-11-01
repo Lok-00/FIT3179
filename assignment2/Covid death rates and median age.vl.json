@@ -6,8 +6,7 @@
     "url": "https://raw.githubusercontent.com/Lok-00/FIT3179/main/owid-covid-data%20(1).csv"
   },
   "mark": "rect",
-  "width": 500,
-  "height": 300,
+  "width": "container",
   "encoding": {
     "x": {
       "bin": {"maxbins": 60},
