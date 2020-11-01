@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": "container"
+  "width": "container",
   "background": "seashell",
   "title": "COVID-19 total_tests of continent",
   "data": {
