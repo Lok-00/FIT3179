@@ -54,8 +54,7 @@
           "type": "quantitative"
         }
       },
-      "width": 600,
-      "height": 300,
+      "width": "container",
       "mark": "point",
       "selection": {"brush": {"encodings": ["x"], "type": "interval"}},
       "transform": [{"filter": {"selection": "click"}}]
