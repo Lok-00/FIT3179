@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Lok-00/FIT3179/main/owid-covid-data%20(1).csv"
+  },
+  "title": "Daily COVID-19 New Death Cases during 2020",
+  "background": "seashell",
+  "config": {"view": {"strokeWidth": 0, "step": 13}, "axis": {"domain": false}},
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "date",
+      "timeUnit": "date",
+      "type": "ordinal",
+      "title": "Day",
+      "axis": {"labelAngle": 0, "format": "%e"}
+    },
+    "y": {
+      "field": "date",
+      "timeUnit": "month",
+      "type": "ordinal",
+      "title": "Month"
+    },
+    "color": {
+      "field": "new_deaths",
+      "aggregate": "max",
+      "type": "quantitative",
+      "legend": {"title": null}
+    }
+  }
+}
