@@ -54,7 +54,6 @@
           "type": "quantitative"
         }
       },
-      "width": 350,
       "mark": "point",
       "selection": {"brush": {"encodings": ["x"], "type": "interval"}},
       "transform": [{"filter": {"selection": "click"}}]
@@ -89,7 +88,6 @@
         "x": {"aggregate": "count"},
         "y": {"title": "continent", "field": "continent"}
       },
-      "width": 350,
       "mark": "bar",
       "selection": {"click": {"encodings": ["color"], "type": "multi"}},
       "transform": [{"filter": {"selection": "brush"}}]
