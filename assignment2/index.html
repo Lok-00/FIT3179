@@ -26,6 +26,9 @@
       font-weight: 900;
       text-align: center;
     }
+    p1{
+      text-align: center;
+    }
      body{
        background-color: lightgray;
      }
@@ -70,10 +73,10 @@
 
     <!-- pure grid group -->
     <div class="pure-g">
-        <div class="pure-u-1">
+        <div class="pure-u-1-1">
           <div class="description description-left">
             <h2>The Choropleth Map</h2>
-            <p>Choropleth map can show quantitative data perfectly, the greater luminance the value, the darker the colour. My choropleth map describes the total death cases of COVID-19 in year 2020 and the range of death cases is 10 to 10000, the greater the count of death cases, the darker the colour on the map.</p>
+            <p1>Choropleth map can show quantitative data perfectly, the greater luminance the value, the darker the colour. My choropleth map describes the total death cases of COVID-19 in year 2020 and the range of death cases is 10 to 10000, the greater the count of death cases, the darker the colour on the map.</p1>
           </div>
         </div>
         <div class="pure-u-1">
@@ -105,11 +108,12 @@
           <p>It shows the total COVID-19 tests in continents over total cases. The main purpose of this visualisation is to show that not everyone is tested on COVID-19 because the total cases confirmed is always higher than the amount of test. People who carry COVID-19 virus may be no effection to himself but he spreads the virus unintentionally daily.</p>
         </div>
       </div>
-      <div class="pure-u-1-3">
+      <div class="pure-u-2-3">
         <div id="vis3"  class="vis-container"></div>
       </div>
     </div>
-    <!-- end pure grid group -->    
+    <!-- end pure grid group -->
+    
   
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
@@ -123,7 +127,7 @@
 <script type="text/javascript">
   var specVis1 = "Choroplethmap.vl.json";
   var specVis2 = "MedianAgeHeatMap.vl.json";
-  var specVis3 = "TotalTestScatterPlot.vl.json";
+  var specVis3 = "GdpInteractiveMultiView.vl.json";
 
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
